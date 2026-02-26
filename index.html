@@ -100,44 +100,7 @@
                             literature, and linguistics build essential skills for an interconnected world.</p>
                         <p>We offer undergraduate majors and minors in Arabic, Chinese, French, German, Hebrew, Italian,
                             Japanese, Persian, Portuguese, Russian, Spanish, and Linguistics.</p>
-                        <!-- The Find Your Path Mini-Quiz -->
-                        <div class="quiz-widget mt-large"
-                            style="background-color: var(--ou-light-gray); border-radius: 8px; border-left: 4px solid var(--ou-crimson); padding: 2rem;">
-                            <h3 style="margin-bottom: 1rem;">Start Your Journey</h3>
-                            <div id="quiz-step-1" class="quiz-step">
-                                <p style="font-weight: 500; font-size: 1.1rem;">Are you a beginner or do you have
-                                    experience?</p>
-                                <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
-                                    <button class="btn btn-outline-dark" onclick="nextQuizStep('beginner')">I'm a
-                                        Beginner</button>
-                                    <button class="btn btn-outline-dark" onclick="nextQuizStep('experienced')">I have
-                                        experience</button>
-                                </div>
-                            </div>
-                            <div id="quiz-step-2" class="quiz-step" style="display:none;">
-                                <p style="font-weight: 500; font-size: 1.1rem;">What region of the world fascinates you
-                                    most?</p>
-                                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
-                                    <button class="btn btn-outline-dark" onclick="finishQuiz('Europe')">Europe</button>
-                                    <button class="btn btn-outline-dark" onclick="finishQuiz('Asia')">Asia</button>
-                                    <button class="btn btn-outline-dark" onclick="finishQuiz('Middle East')">Middle
-                                        East</button>
-                                    <button class="btn btn-outline-dark" onclick="finishQuiz('The Americas')">The
-                                        Americas</button>
-                                </div>
-                            </div>
-                            <div id="quiz-result" class="quiz-step" style="display:none;">
-                                <p id="quiz-result-text"
-                                    style="font-weight: 500; font-size: 1.1rem; color: var(--ou-crimson);"></p>
-                                <div style="display: flex; gap: 1rem; align-items: center; margin-top: 1rem;">
-                                    <a href="#" id="quiz-result-link" class="btn btn-primary"
-                                        style="background-color: var(--ou-crimson); color: white;">Take Action</a>
-                                    <button class="btn btn-outline"
-                                        style="border: none; color: var(--ou-dark-gray); text-decoration: underline; padding: 0;"
-                                        onclick="resetQuiz()">Start Over</button>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -172,20 +135,69 @@
             <div class="container text-center fade-in-up scroll-trigger">
                 <h2 style="margin-bottom: 2rem;">Explore Our Programs</h2>
                 <div class="lang-accordion">
-                    <p id="acc-placements"><span>Placements</span></p>
-                    <p id="acc-tesol"><span>TESOL MA</span></p>
-                    <p id="acc-arabic"><span>العربية</span></p>
-                    <p id="acc-chinese"><span>中文</span></p>
-                    <p id="acc-french"><span>Français</span></p>
-                    <p id="acc-german"><span>Deutsch</span></p>
-                    <p id="acc-hebrew"><span>עברית</span></p>
-                    <p id="acc-italian"><span>Italiano</span></p>
-                    <p id="acc-japanese"><span>日本語</span></p>
-                    <p id="acc-linguistics"><span>Linguistics</span></p>
-                    <p id="acc-persian"><span>فارسی</span></p>
-                    <p id="acc-portuguese"><span>Português</span></p>
-                    <p id="acc-russian"><span>Русский</span></p>
-                    <p id="acc-spanish"><span>Español</span></p>
+                    <article class="lang-card" id="acc-placements">
+                        <span>Placements</span>
+                        <div class="hover-content">Find the right language level based on your prior experience. <br><a
+                                href="#" class="btn btn-outline-light"
+                                style="margin-top:1rem; padding: 0.25rem 0.5rem; font-size:0.8rem;">Take Test</a></div>
+                    </article>
+                    <article class="lang-card" id="acc-tesol">
+                        <span>TESOL MA</span>
+                        <div class="hover-content">Master the art of Teaching English to Speakers of Other Languages.
+                            <br><a href="#" class="btn btn-outline-light"
+                                style="margin-top:1rem; padding: 0.25rem 0.5rem; font-size:0.8rem;">View Curriculum</a>
+                        </div>
+                    </article>
+                    <article class="lang-card" id="acc-arabic">
+                        <span>العربية</span>
+                        <div class="hover-content">Explore the rich heritage and literature of the Arab world.</div>
+                    </article>
+                    <article class="lang-card" id="acc-chinese">
+                        <span>中文</span>
+                        <div class="hover-content">Immerse yourself in Mandarin language and Chinese culture.</div>
+                    </article>
+                    <article class="lang-card" id="acc-french">
+                        <span>Français</span>
+                        <div class="hover-content">Discover Francophone culture, literature, and cinema globally.</div>
+                    </article>
+                    <article class="lang-card" id="acc-german">
+                        <span>Deutsch</span>
+                        <div class="hover-content">Engage with German philosophy, business, and innovation.</div>
+                    </article>
+                    <article class="lang-card" id="acc-hebrew">
+                        <span>עברית</span>
+                        <div class="hover-content">Study modern and historical Hebrew texts and history.</div>
+                    </article>
+                    <article class="lang-card" id="acc-italian">
+                        <span>Italiano</span>
+                        <div class="hover-content">Experience the epicenter of Renaissance art and language.</div>
+                    </article>
+                    <article class="lang-card" id="acc-japanese">
+                        <span>日本語</span>
+                        <div class="hover-content">Master the language and study classical/modern Japanese society.
+                        </div>
+                    </article>
+                    <article class="lang-card" id="acc-linguistics">
+                        <span>Linguistics</span>
+                        <div class="hover-content">Analyze the scientific structure and evolution of human language.
+                        </div>
+                    </article>
+                    <article class="lang-card" id="acc-persian">
+                        <span>فارسی</span>
+                        <div class="hover-content">Delve into Persian poetry, history, and linguistic heritage.</div>
+                    </article>
+                    <article class="lang-card" id="acc-portuguese">
+                        <span>Português</span>
+                        <div class="hover-content">Connect with the cultures of Brazil, Portugal, and beyond.</div>
+                    </article>
+                    <article class="lang-card" id="acc-russian">
+                        <span>Русский</span>
+                        <div class="hover-content">Study the literature, politics, and culture of Eastern Europe.</div>
+                    </article>
+                    <article class="lang-card" id="acc-spanish">
+                        <span>Español</span>
+                        <div class="hover-content">Engage with the vast cultures of Latin America and Spain.</div>
+                    </article>
                 </div>
             </div>
         </section>

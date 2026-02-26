@@ -84,13 +84,42 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
     let currentGreetingIndex = 0;
     const greetingEl = document.getElementById('dynamic-greeting');
+    const containerEl = document.querySelector('.dynamic-greeting-container');
 
-    if (greetingEl) {
+    if (greetingEl && containerEl) {
+        // Create an invisible clone to measure true widths
+        const measureSpan = document.createElement('span');
+        measureSpan.style.visibility = 'hidden';
+        measureSpan.style.position = 'absolute';
+        measureSpan.style.whiteSpace = 'nowrap';
+        measureSpan.style.fontSize = window.getComputedStyle(greetingEl).fontSize;
+        measureSpan.style.fontWeight = window.getComputedStyle(greetingEl).fontWeight;
+        measureSpan.style.fontFamily = window.getComputedStyle(greetingEl).fontFamily;
+        document.body.appendChild(measureSpan);
+
+        // Intialize the container width explicitly
+        measureSpan.textContent = greetings[currentGreetingIndex];
+        containerEl.style.width = measureSpan.offsetWidth + 'px';
+
         setInterval(() => {
+            const nextIndex = (currentGreetingIndex + 1) % greetings.length;
+
+            // Measure upcoming text width
+            measureSpan.textContent = greetings[nextIndex];
+            const nextWidth = measureSpan.offsetWidth + 'px';
+
+            // Fade out current text
             greetingEl.classList.add('greeting-fade-out');
+
             setTimeout(() => {
-                currentGreetingIndex = (currentGreetingIndex + 1) % greetings.length;
+                // Change text while invisible
+                currentGreetingIndex = nextIndex;
                 greetingEl.textContent = greetings[currentGreetingIndex];
+
+                // Animate CSS width to tightly fit the new word
+                containerEl.style.width = nextWidth;
+
+                // Fade in new text
                 greetingEl.classList.remove('greeting-fade-out');
                 greetingEl.classList.add('greeting-fade-in');
                 setTimeout(() => {

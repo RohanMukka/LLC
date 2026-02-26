@@ -606,10 +606,8 @@ ol {
     background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
-    opacity: 0.3;
-    /* Wash out the photo to let the Crimson dominate */
-    mix-blend-mode: multiply;
-    /* Blend the photo into the crimson beautifully */
+    opacity: 0.5;
+    /* Brighten up the image */
     transform: scale(1.05);
     /* Prepare for subtle zoom effect */
     animation: slowZoom 20s infinite alternate linear;
@@ -638,6 +636,19 @@ ol {
     color: var(--ou-light-gray);
     font-weight: 300;
     max-width: 600px;
+    display: block;
+    /* Removed flex to stop text node wrapping */
+    line-height: 1.5;
+}
+
+/* Stabilize the rotating text */
+.dynamic-greeting-container {
+    display: inline-block;
+    vertical-align: bottom;
+    text-align: left;
+    white-space: nowrap;
+    overflow: visible;
+    transition: width 0.5s ease-in-out;
 }
 
 @keyframes slowZoom {
@@ -870,19 +881,23 @@ ol {
     padding: .4em;
 }
 
-.lang-accordion p {
+.lang-accordion .lang-card {
     height: 100%;
     flex: 1;
     overflow: hidden;
     cursor: pointer;
     border-radius: 2px;
-    transition: all .5s;
+    transition: all .5s ease;
     background-color: var(--ou-dark-gray);
     border: 1px solid var(--ou-crimson);
     display: flex;
+    flex-direction: column;
+    /* Stack children vertically */
     justify-content: center;
+    /* Center main vertical text naturally */
     align-items: center;
     margin-bottom: 0;
+    position: relative;
 
     /* Apply Background Based on variable */
     --bg-alpha: 0.8;
@@ -949,20 +964,23 @@ ol {
     --acc-bg: linear-gradient(135deg, #cc0000 30%, #ccaa00 50%, #cc0000 70%);
 }
 
-.lang-accordion p:hover {
+.lang-accordion .lang-card:hover {
     flex: 4;
     --bg-alpha: 0.15;
     border-color: var(--ou-crimson-dark);
+    justify-content: flex-start;
+    /* Move contents up to the top when hovered */
 }
 
-.lang-accordion p span {
-    writing-mode: vertical-lr;
+/* Base Vertical Title */
+.lang-accordion .lang-card span {
+    writing-mode: vertical-rl;
     /* Makes the text flow perfectly from top to bottom */
-    text-orientation: mixed;
-    /* Keeps Latin letters matching read direction, but CJK upright */
+    text-orientation: upright;
+    /* Keeps letters upright/horizontal while stacking down */
     padding: .5em;
     text-align: center;
-    transition: all .5s;
+    transition: all .5s ease;
     text-transform: uppercase;
     color: #ffb8ca;
     /* Matches the vibrant aesthetic while keeping to the crimson family */
@@ -972,10 +990,37 @@ ol {
     white-space: nowrap;
 }
 
-.lang-accordion p:hover span {
+/* Hovered Horizontal Title */
+.lang-accordion .lang-card:hover span {
+    writing-mode: horizontal-tb;
+    /* Switch back to native left-to-right rows */
+    transform: none;
+    /* No scaling needed when going horizontal */
     color: var(--ou-white);
-    transform: scale(1.05);
-    /* Slight pop effect instead of arbitrary rotation */
+    padding: 1.5rem 1rem 0.5rem 1rem;
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: left;
+    /* Align context nicely natively */
+}
+
+/* Hidden Content Setup */
+.lang-accordion .lang-card .hover-content {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    color: #fff;
+    font-size: 0.95rem;
+    padding: 0 1rem;
+    text-align: left;
+    transition: opacity 0.5s ease 0.2s, padding 0.5s ease;
+}
+
+/* Reveal Hidden Content */
+.lang-accordion .lang-card:hover .hover-content {
+    opacity: 1;
+    height: auto;
+    padding-bottom: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -984,7 +1029,7 @@ ol {
         height: 600px;
     }
 
-    .lang-accordion p span {
+    .lang-accordion .lang-card span {
         transform: rotate(0);
         min-width: auto;
     }
