@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="University of Oklahoma - Modern Languages, Literatures, and Linguistics">
+    <title>Modern Languages, Literatures, and Linguistics | The University of Oklahoma</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip Navigation</a>
+
+    <!-- Official OU Header (Top Dark Bar) -->
+    <div class="globalheader bg-dark">
+        <ul class="nav">
+            <li class="nav-item"><a class="nav-link" href="//www.ou.edu/web.html">OU Homepage</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.ou.edu/web/search">Search OU</a></li>
+        </ul>
+    </div>
+
+    <!-- Official Wordmark Banner (White background, custom text logo) -->
+    <div class="header-wordmark-banner">
+        <!-- Recreating the visual text-based logo seen in the screenshot since we don't have the exact image asset downloaded -->
+        <a href="/content/cas/modlang"
+            style="display:flex; align-items:center; text-decoration:none; color:var(--ou-crimson);">
+            <!-- Interlocking OU Logo (placeholder generic image matching the color) -->
+            <img src="https://www.ou.edu/content/dam/website-wordmarks/ou-logo.png" alt="OU Logo"
+                style="height: 60px; margin-right: 20px;">
+            <div style="display:flex; flex-direction:column; justify-content:center;">
+                <span
+                    style="font-family: 'Times New Roman', serif; font-size: 0.75rem; color:#666; letter-spacing:1px; line-height: 1;">DODGE
+                    FAMILY COLLEGE OF ARTS AND SCIENCES</span>
+                <span
+                    style="font-family: 'Times New Roman', serif; font-size: 1.5rem; font-weight: normal; line-height: 1.1; margin-top:5px;">DEPARTMENT
+                    OF MODERN LANGUAGES,</span>
+                <span
+                    style="font-family: 'Times New Roman', serif; font-size: 1.5rem; font-weight: normal; line-height: 1.1;">LITERATURES,
+                    AND LINGUISTICS</span>
+                <span
+                    style="font-family: 'Times New Roman', serif; font-style: italic; font-size: 0.8rem; margin-top:5px;">The
+                    UNIVERSITY of OKLAHOMA</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- Official Department Navbar (material-nav) -->
+    <div class="material-nav section">
+        <div class="p-0" id="ou-dept-navbar">
+            <div class="row m-0 container"
+                style="display: flex; gap: 1rem; align-items: center; padding: 1rem !important; overflow-x: auto;">
+                <a href="/content/cas/modlang" class="nav-link">Home</a>
+                <a href="/content/cas/modlang/academics" class="nav-link">Academics</a>
+                <a href="/content/cas/modlang/llc" class="nav-link">Placement Tests</a>
+                <a href="/content/cas/modlang/people" class="nav-link">People</a>
+                <a href="/content/cas/modlang/resources" class="nav-link">Resources</a>
+                <a href="/content/cas/modlang/news-events" class="nav-link">News & Events</a>
+                <a href="/content/cas/modlang/contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- The background is now solid Crimson, with an overlaid image blending via CSS -->
+        <div class="hero-bg" style="background-image: url('assets/hero-bg.png');"></div>
+        <div class="container hero-content fade-in-up">
+            <h1 class="hero-title">Bring the World to OU</h1>
+            <p class="hero-subtitle" style="font-size: 2rem;">
+                <span class="dynamic-greeting-container">
+                    <span class="dynamic-greeting" id="dynamic-greeting">Welcome</span>
+                </span>
+                to Modern Languages, Literatures, and Linguistics
+            </p>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                <a href="#main-content" class="btn btn-primary">Explore Programs</a>
+                <a href="#news" class="btn btn-outline">Read the Latest</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Intro Section -->
+        <section class="intro-section pd-large">
+            <div class="container">
+                <div class="intro-grid">
+                    <div class="intro-text fade-in-up scroll-trigger">
+                        <h2>Embark on a Global Journey</h2>
+                        <p class="lead">With Modern Languages, Literatures, and Linguistics (MLLL), where languages,
+                            literature, and linguistics build essential skills for an interconnected world.</p>
+                        <p>We offer undergraduate majors and minors in Arabic, Chinese, French, German, Hebrew, Italian,
+                            Japanese, Persian, Portuguese, Russian, Spanish, and Linguistics.</p>
+                        <!-- The Find Your Path Mini-Quiz -->
+                        <div class="quiz-widget mt-large"
+                            style="background-color: var(--ou-light-gray); border-radius: 8px; border-left: 4px solid var(--ou-crimson); padding: 2rem;">
+                            <h3 style="margin-bottom: 1rem;">Start Your Journey</h3>
+                            <div id="quiz-step-1" class="quiz-step">
+                                <p style="font-weight: 500; font-size: 1.1rem;">Are you a beginner or do you have
+                                    experience?</p>
+                                <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+                                    <button class="btn btn-outline-dark" onclick="nextQuizStep('beginner')">I'm a
+                                        Beginner</button>
+                                    <button class="btn btn-outline-dark" onclick="nextQuizStep('experienced')">I have
+                                        experience</button>
+                                </div>
+                            </div>
+                            <div id="quiz-step-2" class="quiz-step" style="display:none;">
+                                <p style="font-weight: 500; font-size: 1.1rem;">What region of the world fascinates you
+                                    most?</p>
+                                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+                                    <button class="btn btn-outline-dark" onclick="finishQuiz('Europe')">Europe</button>
+                                    <button class="btn btn-outline-dark" onclick="finishQuiz('Asia')">Asia</button>
+                                    <button class="btn btn-outline-dark" onclick="finishQuiz('Middle East')">Middle
+                                        East</button>
+                                    <button class="btn btn-outline-dark" onclick="finishQuiz('The Americas')">The
+                                        Americas</button>
+                                </div>
+                            </div>
+                            <div id="quiz-result" class="quiz-step" style="display:none;">
+                                <p id="quiz-result-text"
+                                    style="font-weight: 500; font-size: 1.1rem; color: var(--ou-crimson);"></p>
+                                <div style="display: flex; gap: 1rem; align-items: center; margin-top: 1rem;">
+                                    <a href="#" id="quiz-result-link" class="btn btn-primary"
+                                        style="background-color: var(--ou-crimson); color: white;">Take Action</a>
+                                    <button class="btn btn-outline"
+                                        style="border: none; color: var(--ou-dark-gray); text-decoration: underline; padding: 0;"
+                                        onclick="resetQuiz()">Start Over</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special TESOL Highlights Section (Dark Gray Background) -->
+        <section class="tesol-section pd-large"
+            style="background-color: var(--ou-dark-gray); color: var(--ou-white); position: relative; overflow: hidden;">
+            <div class="cultural-typography-bg">
+                <span class="bg-char char-1">語</span>
+                <span class="bg-char char-2">A</span>
+                <span class="bg-char char-3">ص</span>
+                <span class="bg-char char-4">א</span>
+                <span class="bg-char char-5">Ж</span>
+                <span class="bg-char char-6">æ</span>
+            </div>
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="card-content text-center fade-in-up scroll-trigger">
+                    <h2 style="color: var(--ou-white);">Apply for the MA in TESOL Program</h2>
+                    <p style="color: var(--ou-light-gray); max-width: 800px; margin: 0 auto 2rem auto;">Advance your
+                        career in teaching English to speakers of other languages with our comprehensive and dynamic
+                        program.</p>
+                    <!-- Using sky text on dark background passes AAA -->
+                    <a href="#" class="btn btn-outline" style="border-color: var(--ou-sky); color: var(--ou-sky);">Learn
+                        More About TESOL</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Language Programs Accordion Section -->
+        <section class="programs-accordion-section pd-large">
+            <div class="container text-center fade-in-up scroll-trigger">
+                <h2 style="margin-bottom: 2rem;">Explore Our Programs</h2>
+                <div class="lang-accordion">
+                    <p id="acc-placements"><span>Placements</span></p>
+                    <p id="acc-tesol"><span>TESOL MA</span></p>
+                    <p id="acc-arabic"><span>العربية</span></p>
+                    <p id="acc-chinese"><span>中文</span></p>
+                    <p id="acc-french"><span>Français</span></p>
+                    <p id="acc-german"><span>Deutsch</span></p>
+                    <p id="acc-hebrew"><span>עברית</span></p>
+                    <p id="acc-italian"><span>Italiano</span></p>
+                    <p id="acc-japanese"><span>日本語</span></p>
+                    <p id="acc-linguistics"><span>Linguistics</span></p>
+                    <p id="acc-persian"><span>فارسی</span></p>
+                    <p id="acc-portuguese"><span>Português</span></p>
+                    <p id="acc-russian"><span>Русский</span></p>
+                    <p id="acc-spanish"><span>Español</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Language Explorer Map Section -->
+        <section class="language-explorer-section pd-large bg-light">
+            <div class="container">
+                <h2 class="text-center" style="margin-bottom: 2rem;">Language Explorer</h2>
+                <div class="map-container fade-in-up scroll-trigger"
+                    style="position: relative; max-width: 900px; margin: 0 auto;">
+                    <!-- Minimalist World Map SVG Background -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
+                        alt="World Map" class="world-map-img" style="width:100%; opacity:0.1; filter: grayscale(100%);">
+
+                    <!-- Interactive Regions -->
+                    <div class="map-hotspot hotspot-na"
+                        onclick="openLanguagePanel('North America', 'Native American Languages, Linguistics')"
+                        style="top: 35%; left: 18%;"></div>
+                    <div class="map-hotspot hotspot-sa"
+                        onclick="openLanguagePanel('South America', 'Spanish, Portuguese')"
+                        style="top: 70%; left: 30%;"></div>
+                    <div class="map-hotspot hotspot-eu"
+                        onclick="openLanguagePanel('Europe', 'French, German, Italian, Russian, Spanish, Portuguese')"
+                        style="top: 30%; left: 52%;"></div>
+                    <div class="map-hotspot hotspot-me"
+                        onclick="openLanguagePanel('Middle East', 'Arabic, Hebrew, Persian')"
+                        style="top: 45%; left: 62%;"></div>
+                    <div class="map-hotspot hotspot-as" onclick="openLanguagePanel('Asia', 'Chinese, Japanese')"
+                        style="top: 40%; left: 75%;"></div>
+
+                    <!-- Slide-out Panel -->
+                    <div id="language-panel" class="language-panel">
+                        <button class="close-panel" onclick="closeLanguagePanel()">&times;</button>
+                        <h3 id="panel-region-name">Region</h3>
+                        <p id="panel-languages" style="margin-bottom: 1rem; color: var(--ou-dark-gray);">Languages
+                            mapped here.</p>
+                        <a href="#" class="btn btn-outline-dark" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View
+                            Curriculums</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community & Events Section -->
+        <section class="community-events-section pd-large">
+            <div class="container fade-in-up scroll-trigger">
+                <h2 class="text-center" style="margin-bottom: 3rem;">Community & Events</h2>
+
+                <div class="community-grid">
+                    <!-- Upcoming Events -->
+                    <div class="upcoming-events">
+                        <h3 style="margin-bottom: 2rem;">Upcoming Events</h3>
+
+                        <div class="event-item">
+                            <div class="event-date">
+                                <div class="event-month">OCT</div>
+                                <div class="event-day">25</div>
+                            </div>
+                            <div class="event-details">
+                                <h4>Language Fair</h4>
+                                <p>Language fair to visual and cultural...</p>
+                                <span class="event-meta">March 25, 2023</span>
+                            </div>
+                        </div>
+
+                        <div class="event-item">
+                            <div class="event-date">
+                                <div class="event-month" style="background-color: var(--ou-crimson-dark);">MAY</div>
+                                <div class="event-day">10</div>
+                            </div>
+                            <div class="event-details">
+                                <h4>Cultural Symposium</h4>
+                                <p>Cultural symposium, cultural activities...</p>
+                                <span class="event-meta">March 25, 2023</span>
+                            </div>
+                        </div>
+
+                        <div class="event-item">
+                            <div class="event-date">
+                                <div class="event-month">OCT</div>
+                                <div class="event-day">15</div>
+                            </div>
+                            <div class="event-details">
+                                <h4>Guest Speaker Series</h4>
+                                <p>Guest Speaker Series for Guest symposium...</p>
+                                <span class="event-meta">March 20, 2023</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Student Life -->
+                    <div class="student-life">
+                        <h3 style="margin-bottom: 2rem;">Student Life</h3>
+
+                        <div class="student-life-grid">
+                            <div class="grid-media-container item-1" onmouseenter="playVideo(this)"
+                                onmouseleave="pauseVideo(this)">
+                                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=400&auto=format&fit=crop"
+                                    alt="Students studying" class="grid-img">
+                                <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop playsinline
+                                    class="grid-video"></video>
+                            </div>
+                            <div class="grid-media-container item-2" onmouseenter="playVideo(this)"
+                                onmouseleave="pauseVideo(this)">
+                                <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=400&auto=format&fit=crop"
+                                    alt="Cultural festival" class="grid-img">
+                                <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop playsinline
+                                    class="grid-video"></video>
+                            </div>
+                            <div class="grid-media-container item-3" onmouseenter="playVideo(this)"
+                                onmouseleave="pauseVideo(this)">
+                                <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=400&auto=format&fit=crop"
+                                    alt="Students outdoors" class="grid-img">
+                                <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop playsinline
+                                    class="grid-video"></video>
+                            </div>
+                            <div class="grid-media-container item-4" onmouseenter="playVideo(this)"
+                                onmouseleave="pauseVideo(this)">
+                                <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=400&auto=format&fit=crop"
+                                    alt="Student presentation" class="grid-img">
+                                <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop playsinline
+                                    class="grid-video"></video>
+                            </div>
+                            <div class="grid-media-container item-5" onmouseenter="playVideo(this)"
+                                onmouseleave="pauseVideo(this)">
+                                <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?q=80&w=400&auto=format&fit=crop"
+                                    alt="Group selfie" class="grid-img">
+                                <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop playsinline
+                                    class="grid-video"></video>
+                            </div>
+                            <div class="grid-media-container item-6" onmouseenter="playVideo(this)"
+                                onmouseleave="pauseVideo(this)">
+                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=400&auto=format&fit=crop"
+                                    alt="Happy students" class="grid-img">
+                                <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop playsinline
+                                    class="grid-video"></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Custom Dark Footer as in Screenshot -->
+    <footer class="custom-dark-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <!-- Left Side: Address -->
+                <div class="footer-col contact-col">
+                    <h4>Contact Us</h4>
+                    <p>282 Postesson St.<br>
+                        Oklahoma City 73012</p>
+                    <p>(018) 322-4255</p>
+                    <p><a href="mailto:email@ou.edu.com" class="footer-link">email@ou.edu.com</a></p>
+                </div>
+
+                <!-- Right Side: Social Media Icons -->
+                <div class="footer-col social-col">
+                    <h4>Social</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">
+                            <svg class="social-svg" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="white" />
+                                <path
+                                    d="M14 12h-2v7H9v-7H7v-2h2V8.5C9 6.8 10.2 6 12.5 6H15v2.5h-1.5c-1 0-1.5.5-1.5 1.25V10h3l-.5 2z"
+                                    fill="#1a1a1a" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg class="social-svg" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="white" />
+                                <path
+                                    d="M16 8.5c-.5.2-1 .4-1.6.5.6-.4 1-.9 1.2-1.6-.6.3-1.2.6-1.8.7-.5-.6-1.3-.9-2.1-.9-1.6 0-3 1.4-3 3 0 .2 0 .5.1.7-2.5-.1-4.7-1.3-6.2-3.1-.3.5-.4 1-.4 1.5 0 1 .5 1.9 1.3 2.5-.4 0-.9-.1-1.3-.4v.1c0 1.4 1 2.6 2.4 2.9-.2 0-.5.1-.8.1-.2 0-.4 0-.6-.1.4 1.2 1.5 2 2.8 2-1 .8-2.3 1.2-3.7 1.2-.2 0-.5 0-.7 0 1.3.8 2.9 1.3 4.6 1.3 5.5 0 8.5-4.6 8.5-8.5v-.4c.6-.5 1.1-1 1.5-1.6z"
+                                    fill="#1a1a1a" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg class="social-svg" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="white" />
+                                <path
+                                    d="M12 7.8c-2.3 0-4.2 1.9-4.2 4.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2-1.9-4.2-4.2-4.2zm0 6.9c-1.5 0-2.8-1.2-2.8-2.8S10.5 9.1 12 9.1s2.8 1.2 2.8 2.8-1.2 2.7-2.8 2.7zm2.7-5.8c-.5 0-.9.4-.9.9s.4.9.9.9-.4.9-.9.9-.9-.4-.9-.9.4-.9.9-.9zm1.8.6c-.1-1.2-.4-2.2-1.2-3-1-.9-2-1.2-3.3-1.2-1.4-.1-5.6-.1-7 0-1.3.1-2.3.4-3.3 1.2-.8.8-1.1 1.8-1.2 3-.1 1.4-.1 5.6 0 7 .1 1.2.4 2.2 1.2 3 1 .9 2 1.2 3.3 1.2 1.4.1 5.6.1 7 0 1.3-.1 2.3-.4 3.3-1.2.8-.8 1.1-1.8 1.2-3 .1-1.4.1-5.6 0-7zm-1.5 7.6c-.2.6-.7 1.1-1.3 1.3-1 .4-3.3.3-4.5.3s-3.5.1-4.5-.3c-.6-.2-1.1-.7-1.3-1.3-.4-1-.3-3.3-.3-4.5s-.1-3.5.3-4.5c.2-.6.7-1.1 1.3-1.3 1-.4 3.3-.3 4.5-.3s3.5-.1 4.5.3c.6.2 1.1.7 1.3 1.3.4 1 .3 3.3.3 4.5s.1 3.5-.3 4.5z"
+                                    fill="#1a1a1a" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg class="social-svg" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="white" />
+                                <path
+                                    d="M8.5 17.5h-2v-7h2v7zm-1-8c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm9.5 8h-2v-3.5c0-.8 0-1.8-1.1-1.8-1.1 0-1.3.9-1.3 1.8v3.5h-2v-7h2v1c.3-.6 1-1.2 2.2-1.2 2.4 0 2.8 1.6 2.8 3.6v3.6z"
+                                    fill="#1a1a1a" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Footer Links 1 -->
+                <div class="footer-col links-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#" class="footer-link">Admissions</a></li>
+                        <li><a href="#" class="footer-link">Financial Aid</a></li>
+                        <li><a href="#" class="footer-link">Libraries</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Links 2 -->
+                <div class="footer-col links-col">
+                    <h4>University</h4>
+                    <ul>
+                        <li><a href="#" class="footer-link">About OU</a></li>
+                        <li><a href="#" class="footer-link">Campus Map</a></li>
+                        <li><a href="#" class="footer-link">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom-logo">
+                <img src="https://www.ou.edu/content/dam/homepage2012/design/footerlogo.png" alt="OU Logo"
+                    class="ou-footer-logo" style="filter: brightness(0) invert(1);">
+                <p>Copyright © 2021 Oklahoma. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
