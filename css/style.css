@@ -877,24 +877,91 @@ ol {
     cursor: pointer;
     border-radius: 2px;
     transition: all .5s;
-    background: var(--ou-dark-gray);
+    background-color: var(--ou-dark-gray);
     border: 1px solid var(--ou-crimson);
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 0;
+
+    /* Apply Background Based on variable */
+    --bg-alpha: 0.8;
+    background-image: linear-gradient(rgba(0, 0, 0, var(--bg-alpha)), rgba(0, 0, 0, var(--bg-alpha))), var(--acc-bg, none);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Define Unique Backgrounds using CSS Vars */
+#acc-placements {
+    --acc-bg: url('../assets/bg_placements_1772140529191.png');
+}
+
+#acc-tesol {
+    --acc-bg: url('../assets/bg_tesol_1772140541531.png');
+}
+
+#acc-arabic {
+    --acc-bg: url('../assets/bg_arabic_1772140554964.png');
+}
+
+#acc-chinese {
+    --acc-bg: url('../assets/bg_chinese_1772140568623.png');
+}
+
+#acc-french {
+    --acc-bg: url('../assets/bg_french_1772140581634.png');
+}
+
+#acc-german {
+    --acc-bg: url('../assets/bg_german_1772140593483.png');
+}
+
+#acc-hebrew {
+    --acc-bg: url('../assets/bg_hebrew_1772140605766.png');
+}
+
+#acc-italian {
+    --acc-bg: url('../assets/bg_italian_1772140620295.png');
+}
+
+#acc-japanese {
+    --acc-bg: url('../assets/bg_japanese_1772140636274.png');
+}
+
+#acc-linguistics {
+    --acc-bg: url('../assets/bg_linguistics_1772140647595.png');
+}
+
+#acc-persian {
+    --acc-bg: url('../assets/bg_persian_1772140660091.png');
+}
+
+/* Fallbacks manually mapped for the ones pending */
+#acc-portuguese {
+    --acc-bg: linear-gradient(135deg, #006600 30%, #cc0000 70%);
+}
+
+#acc-russian {
+    --acc-bg: linear-gradient(180deg, #dddddd 25%, #0033cc 50%, #cc0000 75%);
+}
+
+#acc-spanish {
+    --acc-bg: linear-gradient(135deg, #cc0000 30%, #ccaa00 50%, #cc0000 70%);
 }
 
 .lang-accordion p:hover {
     flex: 4;
-    background: var(--ou-crimson-dark);
+    --bg-alpha: 0.15;
+    border-color: var(--ou-crimson-dark);
 }
 
 .lang-accordion p span {
-    min-width: 14em;
+    writing-mode: vertical-lr;
+    /* Makes the text flow perfectly from top to bottom */
+    text-orientation: mixed;
+    /* Keeps Latin letters matching read direction, but CJK upright */
     padding: .5em;
     text-align: center;
-    transform: rotate(-90deg);
     transition: all .5s;
     text-transform: uppercase;
     color: #ffb8ca;
@@ -906,8 +973,9 @@ ol {
 }
 
 .lang-accordion p:hover span {
-    transform: rotate(0);
     color: var(--ou-white);
+    transform: scale(1.05);
+    /* Slight pop effect instead of arbitrary rotation */
 }
 
 @media (max-width: 768px) {
