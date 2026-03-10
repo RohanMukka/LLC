@@ -607,7 +607,7 @@ ol {
     display: flex;
     align-items: center;
     overflow: hidden;
-    margin-top: 80px;
+    margin-top: 0;
     /* Offset for fixed header */
     background-color: var(--ou-black);
 }
@@ -633,6 +633,17 @@ ol {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    animation: slowFadeIn 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slowFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 /* Removed linear-gradient overlay to prioritize pure Crimson */
 .hero-overlay {
@@ -685,11 +696,20 @@ ol {
 /* =========================================
    Intro Section
    ========================================= */
+.intro-section {
+    background-color: var(--ou-crimson);
+    color: var(--ou-white);
+}
+
 .intro-text h2 {
     font-size: 2.5rem;
-    color: var(--ou-dark-gray);
-    /* Accessible text color */
+    color: var(--ou-white);
 }
+
+.intro-text .lead {
+    color: var(--ou-light-gray);
+}
+
 
 .info-card {
     background-color: var(--ou-light-gray);
@@ -1156,7 +1176,6 @@ ol {
 /* Hero Dynamic Greeting */
 .dynamic-greeting-container {
     display: inline-block;
-    min-width: 250px;
     text-align: left;
 }
 
@@ -1447,7 +1466,7 @@ ol {
             <h1 class="hero-title">Bring the World to OU</h1>
             <p class="hero-subtitle" style="font-size: 2rem;">
                 <span class="dynamic-greeting-container">
-                    <span class="dynamic-greeting" id="dynamic-greeting">Welcome</span>
+                    <span class="dynamic-greeting" id="dynamic-greeting" dir="auto">Welcome</span>
                 </span>
                 to Modern Languages, Literatures, and Linguistics
             </p>
@@ -1875,9 +1894,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Dynamic Greeting Rotator ---
     const greetings = [
-        "Welcome", "Bienvenue", "Ã™â€¦Ã˜Â±Ã˜Â­Ã˜Â¨Ã˜Â§Ã™â€¹", "Ã¦Â¬Â¢Ã¨Â¿Å½", "Ãâ€ÃÂ¾ÃÂ±Ã‘â‚¬ÃÂ¾ ÃÂ¿ÃÂ¾ÃÂ¶ÃÂ°ÃÂ»ÃÂ¾ÃÂ²ÃÂ°Ã‘â€šÃ‘Å’",
-        "Willkommen", "Benvenuto", "Ã£â€šË†Ã£Ââ€ Ã£Ââ€œÃ£ÂÂ", "Bem-vindo", "Ã—â€˜Ã—Â¨Ã—â€¢Ã—Å¡ Ã—â€Ã—â€˜Ã—Â",
-        "Ã˜Â®Ã™Ë†Ã˜Â´ Ã˜Â¢Ã™â€¦Ã˜Â¯Ã›Å’Ã˜Â¯", "Ã‚Â¡Bienvenido!"
+        "Welcome", "Bienvenue", "Ù…Ø±Ø­Ø¨Ø§Ù‹", "æ¬¢è¿Ž", "Ð”Ð¾Ð±Ñ€Ð¾ Ð¿Ð¾Ð¶Ð°Ð»Ð¾Ð²Ð°Ñ‚ÑŒ",
+        "Willkommen", "Benvenuto", "ã‚ˆã†ã“ã", "Bem-vindo", "×‘×¨×•×š ×”×‘×",
+        "Ø®ÙˆØ´ Ø¢Ù…Ø¯ÛŒØ¯", "Â¡Bienvenido!"
     ];
     let currentGreetingIndex = 0;
     const greetingEl = document.getElementById('dynamic-greeting');

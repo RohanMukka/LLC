@@ -617,6 +617,17 @@ ol {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    animation: slowFadeIn 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slowFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 /* Removed linear-gradient overlay to prioritize pure Crimson */
 .hero-overlay {
