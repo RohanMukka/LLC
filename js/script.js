@@ -78,9 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Dynamic Greeting Rotator ---
     const greetings = [
-        "Welcome", "Bienvenue", "Ù…Ø±Ø­Ø¨Ø§Ù‹", "æ¬¢è¿Ž", "Ð”Ð¾Ð±Ñ€Ð¾ Ð¿Ð¾Ð¶Ð°Ð»Ð¾Ð²Ð°Ñ‚ÑŒ",
-        "Willkommen", "Benvenuto", "ã‚ˆã†ã“ã", "Bem-vindo", "×‘×¨×•×š ×”×‘×",
-        "Ø®ÙˆØ´ Ø¢Ù…Ø¯ÛŒØ¯", "Â¡Bienvenido!"
+        "Welcome", "Bienvenue", "مرحباً", "欢迎", "Добро пожаловать",
+        "Willkommen", "Benvenuto", "ようこそ", "Bem-vindo", "ברוך הבא",
+        "خوش آمدید", "¡Bienvenido!"
     ];
     let currentGreetingIndex = 0;
     const greetingEl = document.getElementById('dynamic-greeting');
