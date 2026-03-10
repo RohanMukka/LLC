@@ -669,11 +669,20 @@ ol {
 /* =========================================
    Intro Section
    ========================================= */
+.intro-section {
+    background-color: var(--ou-crimson);
+    color: var(--ou-white);
+}
+
 .intro-text h2 {
     font-size: 2.5rem;
-    color: var(--ou-dark-gray);
-    /* Accessible text color */
+    color: var(--ou-white);
 }
+
+.intro-text .lead {
+    color: var(--ou-light-gray);
+}
+
 
 .info-card {
     background-color: var(--ou-light-gray);
