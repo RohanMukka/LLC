@@ -78,9 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Dynamic Greeting Rotator ---
     const greetings = [
-        "Welcome", "Bienvenue", "مرحباً", "欢迎", "Добро пожаловать",
-        "Willkommen", "Benvenuto", "ようこそ", "Bem-vindo", "ברוך הבא",
-        "خوش آمدید", "¡Bienvenido!"
+        "Welcome", "Bienvenue", "Ù…Ø±Ø­Ø¨Ø§Ù‹", "æ¬¢è¿Ž", "Ð”Ð¾Ð±Ñ€Ð¾ Ð¿Ð¾Ð¶Ð°Ð»Ð¾Ð²Ð°Ñ‚ÑŒ",
+        "Willkommen", "Benvenuto", "ã‚ˆã†ã“ã", "Bem-vindo", "×‘×¨×•×š ×”×‘×",
+        "Ø®ÙˆØ´ Ø¢Ù…Ø¯ÛŒØ¯", "Â¡Bienvenido!"
     ];
     let currentGreetingIndex = 0;
     const greetingEl = document.getElementById('dynamic-greeting');
@@ -187,3 +187,30 @@ function resetQuiz() {
     document.getElementById('quiz-step-2').style.display = 'none';
     document.getElementById('quiz-step-1').style.display = 'block';
 }
+
+// --- Hero Background Video Control (Local) ---
+document.addEventListener('DOMContentLoaded', () => {
+    const heroVideo = document.getElementById('hero-local-video');
+    
+    if (heroVideo) {
+        // Start playing at 3 seconds explicitly
+        const setStartTime = () => {
+            if (heroVideo.currentTime < 3) {
+                heroVideo.currentTime = 3;
+            }
+        };
+
+        // When metadata loads or just randomly on DOM, set 3 seconds
+        heroVideo.addEventListener('loadedmetadata', setStartTime);
+        heroVideo.addEventListener('play', setStartTime);
+
+        heroVideo.addEventListener('timeupdate', () => {
+            // Loop back to 3 seconds if we hit 18 seconds
+            if (heroVideo.currentTime >= 18) {
+                heroVideo.currentTime = 3;
+            }
+        });
+    }
+});
+
+
