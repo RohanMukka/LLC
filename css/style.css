@@ -197,44 +197,47 @@ ol {
     transition: all var(--transition-normal);
 }
 
-/* Primary Hero Button: White background, Black text */
+/* Primary Button: White background, Black text */
 .btn-primary {
     background-color: var(--ou-white);
     color: var(--ou-black);
+    border-color: var(--ou-white);
 }
 
 .btn-primary:hover {
-    background-color: var(--ou-light-gray);
-    color: var(--ou-black);
+    background-color: var(--ou-crimson) !important;
+    color: var(--ou-white) !important;
+    border-color: var(--ou-crimson) !important;
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
 
-/* Secondary Hero Button: Transparent background, Sky border, Sky text */
+/* Secondary Button: Transparent background */
 .btn-outline {
     background-color: transparent;
-    border-color: var(--ou-sky);
-    color: var(--ou-sky);
+    border-color: currentColor; /* Inherits text color dynamically */
+    color: inherit; /* Will take Sky or White or Black depending on inline style */
 }
 
 .btn-outline:hover {
-    background-color: var(--ou-sky);
-    color: var(--ou-black);
-    /* Sky background requires black/dark-gray text for contrast */
+    background-color: var(--ou-crimson) !important;
+    border-color: var(--ou-crimson) !important;
+    color: var(--ou-white) !important;
     transform: translateY(-2px);
     box-shadow: var(--shadow-sm);
 }
 
-/* Alternate Outline Button (For Light Backgrounds e.g. Highlighting News) */
+/* Alternate Outline Button */
 .btn-outline-dark {
     background-color: transparent;
-    border-color: var(--ou-crimson);
-    color: var(--ou-crimson);
+    border-color: var(--ou-black);
+    color: var(--ou-black);
 }
 
 .btn-outline-dark:hover {
-    background-color: var(--ou-crimson);
-    color: var(--ou-white);
+    background-color: var(--ou-crimson) !important;
+    border-color: var(--ou-crimson) !important;
+    color: var(--ou-white) !important;
     transform: translateY(-2px);
     box-shadow: var(--shadow-sm);
 }
@@ -315,7 +318,7 @@ ol {
 /* Department Navbar Hamburger Updates */
 .mobile-dept-toggle {
     display: none;
-    background-color: var(--ou-crimson-dark);
+    background-color: var(--ou-black);
     color: white;
     padding: 15px 20px;
     justify-content: space-between;
@@ -369,7 +372,7 @@ ol {
         display: none; /* Hidden by default on mobile */
         flex-direction: column;
         width: 100%;
-        background-color: var(--ou-crimson-dark);
+        background-color: var(--ou-black);
     }
     
     #ou-dept-navbar .dept-nav-links.active {
@@ -961,7 +964,7 @@ ol {
     height: 400px;
     margin: 0 auto;
     border-radius: 4px;
-    background: var(--ou-dark-gray);
+    background: var(--ou-black);
     display: flex;
     gap: 5px;
     padding: .4em;
@@ -974,7 +977,7 @@ ol {
     cursor: pointer;
     border-radius: 2px;
     transition: all .5s ease;
-    background-color: var(--ou-dark-gray);
+    background-color: var(--ou-black);
     border: 1px solid var(--ou-crimson);
     display: flex;
     flex-direction: column;
