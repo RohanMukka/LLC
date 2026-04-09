@@ -54,10 +54,17 @@
     </div>
 
     <!-- Official Department Navbar (material-nav) -->
-    <div class="material-nav section">
+    <div class="material-nav section" style="background-color: var(--ou-crimson);">
         <div class="p-0" id="ou-dept-navbar">
-            <div class="row m-0 container"
-                style="display: flex; gap: 1rem; align-items: center; padding: 1rem !important; overflow-x: auto;">
+            <div class="mobile-dept-toggle" onclick="toggleDeptMenu()">
+                <span>MENU</span>
+                <div class="hamburger-icon" id="dept-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="container dept-nav-links" id="dept-nav-links">
                 <a href="/content/cas/modlang" class="nav-link">Home</a>
                 <a href="/content/cas/modlang/academics" class="nav-link">Academics</a>
                 <a href="/content/cas/modlang/llc" class="nav-link">Placement Tests</a>
@@ -212,9 +219,10 @@
         <section class="language-explorer-section pd-large bg-light">
             <div class="container">
                 <h2 class="text-center" style="margin-bottom: 2rem;">Language Explorer</h2>
-                <div class="map-container fade-in-up scroll-trigger"
-                    style="position: relative; max-width: 900px; margin: 0 auto;">
-                    <!-- Minimalist World Map SVG Background -->
+                <div style="width: 100%; overflow-x: auto; padding-bottom: 15px; -webkit-overflow-scrolling: touch;" class="fade-in-up scroll-trigger">
+                    <div class="map-container"
+                        style="position: relative; width: 100%; min-width: 750px; max-width: 900px; margin: 0 auto;">
+                        <!-- Minimalist World Map SVG Background -->
                     <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
                         alt="World Map" class="world-map-img" style="width:100%; opacity:0.1; filter: grayscale(100%);">
 
@@ -244,6 +252,7 @@
                             Curriculums</a>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
 

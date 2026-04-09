@@ -310,17 +310,78 @@ ol {
 #ou-dept-navbar {
     background-color: var(--ou-crimson);
     color: white;
-    display: flex;
-    justify-content: center;
 }
 
-#ou-dept-navbar .container {
+/* Department Navbar Hamburger Updates */
+.mobile-dept-toggle {
+    display: none;
+    background-color: var(--ou-crimson-dark);
+    color: white;
+    padding: 15px 20px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.hamburger-icon.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+#ou-dept-navbar .dept-nav-links {
     display: flex;
     gap: 0;
     align-items: center;
     padding: 0 !important;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Normal wrapping on desktop */
+}
+
+@media (max-width: 900px) {
+    .mobile-dept-toggle {
+        display: flex;
+    }
+    
+    #ou-dept-navbar .dept-nav-links {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--ou-crimson-dark);
+    }
+    
+    #ou-dept-navbar .dept-nav-links.active {
+        display: flex; /* Show when toggled */
+    }
+    
+    #ou-dept-navbar .dept-nav-links .nav-link {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 15px 0;
+    }
 }
 
 #ou-dept-navbar .nav-link {
@@ -1051,12 +1112,20 @@ ol {
 @media (max-width: 768px) {
     .lang-accordion {
         flex-direction: column;
-        height: 600px;
+        height: 800px; /* Taller to fit all 14 languages comfortably on mobile */
     }
 
     .lang-accordion .lang-card span {
-        transform: rotate(0);
-        min-width: auto;
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+        transform: none;
+        width: 100%;
+        text-align: left;
+        padding: 0.5rem 1rem;
+    }
+
+    .lang-accordion .lang-card:hover span {
+        padding: 1rem 1rem 0.2rem 1rem;
     }
 
     .lang-accordion p:hover span {

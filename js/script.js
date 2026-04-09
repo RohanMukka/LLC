@@ -213,4 +213,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// --- Department Navbar Mobile Toggle ---
+function toggleDeptMenu() {
+    const navLinks = document.getElementById('dept-nav-links');
+    const hamburgerIcon = document.getElementById('dept-hamburger');
+    
+    if (navLinks && hamburgerIcon) {
+        navLinks.classList.toggle('active');
+        hamburgerIcon.classList.toggle('open');
+    }
+}
+
 
