@@ -704,11 +704,12 @@ ol {
     position: relative;
     z-index: 3;
     color: var(--ou-white);
-    max-width: 800px;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: clamp(1.75rem, 5vw, 4.5rem);
     color: var(--ou-white);
     margin-bottom: var(--spacing-md);
 }
