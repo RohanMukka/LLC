@@ -284,42 +284,47 @@
                     <div class="upcoming-events">
                         <h3 style="margin-bottom: 2rem;">Today's Events</h3>
 
-                        <div class="event-item">
-                            <div class="event-date" style="background-color: var(--ou-light-gray); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--ou-crimson);">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 00-1.38-3.56A8.03 8.03 0 0118.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.987 7.987 0 015.08 16zm2.95-8H5.08a7.987 7.987 0 013.84-3.56A15.65 15.65 0 007.54 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 01-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/>
-                                </svg>
+                        <div class="events-scroll-container" style="max-height: 400px; overflow-y: auto; padding-right: 1rem; display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div class="event-item">
+                                <div class="event-date" style="background-color: var(--ou-light-gray); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--ou-crimson);">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 00-1.38-3.56A8.03 8.03 0 0118.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.987 7.987 0 015.08 16zm2.95-8H5.08a7.987 7.987 0 013.84-3.56A15.65 15.65 0 007.54 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 01-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/>
+                                    </svg>
+                                </div>
+                                <div class="event-details">
+                                    <h4>OU Language Fair Orientation</h4>
+                                    <p style="margin-bottom: 0.25rem;">Highlighting linguistic diversity, this session kicks off the annual fair welcoming hundreds of students to campus.</p>
+                                    <span class="event-meta" style="color: var(--ou-crimson); font-weight: 600; display: block; margin-bottom: 0.5rem;">Today, 10:00 AM - Student Union</span>
+                                    <a href="#" style="font-size: 0.85rem; font-weight: 600; text-decoration: underline;">Learn More</a>
+                                </div>
                             </div>
-                            <div class="event-details">
-                                <h4>OU Language Fair Orientation</h4>
-                                <p style="margin-bottom: 0;">Highlighting linguistic diversity, this session kicks off the annual fair welcoming hundreds of students to campus.</p>
-                                <span class="event-meta" style="color: var(--ou-crimson); font-weight: 600;">Today, 10:00 AM - Student Union</span>
-                            </div>
-                        </div>
 
-                        <div class="event-item">
-                            <div class="event-date" style="background-color: var(--ou-light-gray); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--ou-crimson);">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72l5 2.73 5-2.73v3.72z"/>
-                                </svg>
+                            <div class="event-item">
+                                <div class="event-date" style="background-color: var(--ou-light-gray); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--ou-crimson);">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72l5 2.73 5-2.73v3.72z"/>
+                                    </svg>
+                                </div>
+                                <div class="event-details">
+                                    <h4>Cultural Literature Symposia</h4>
+                                    <p style="margin-bottom: 0.25rem;">A rotating academic symposium where students and faculty engage deeply with international literature.</p>
+                                    <span class="event-meta" style="color: var(--ou-crimson); font-weight: 600; display: block; margin-bottom: 0.5rem;">Today, 2:00 PM - Bizzell Library</span>
+                                    <a href="#" style="font-size: 0.85rem; font-weight: 600; text-decoration: underline;">Learn More</a>
+                                </div>
                             </div>
-                            <div class="event-details">
-                                <h4>Cultural Literature Symposia</h4>
-                                <p style="margin-bottom: 0;">A rotating academic symposium where students and faculty engage deeply with international literature.</p>
-                                <span class="event-meta" style="color: var(--ou-crimson); font-weight: 600;">Today, 2:00 PM - Bizzell Library</span>
-                            </div>
-                        </div>
 
-                        <div class="event-item">
-                            <div class="event-date" style="background-color: var(--ou-light-gray); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--ou-crimson);">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM8 14H6v-2h2v2zm0-3H6V9h2v2zm0-3H6V6h2v2zm7 6h-5v-2h5v2zm3-3h-8V9h8v2zm0-3h-8V6h8v2z"/>
-                                </svg>
-                            </div>
-                            <div class="event-details">
-                                <h4>Guest Speaker: Int'l Linguistics</h4>
-                                <p style="margin-bottom: 0;">A visit from a distinguished international scholar shaping the progressive discourse of modern linguistics.</p>
-                                <span class="event-meta" style="color: var(--ou-crimson); font-weight: 600;">Today, 6:30 PM - Nielsen Hall</span>
+                            <div class="event-item">
+                                <div class="event-date" style="background-color: var(--ou-light-gray); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--ou-crimson);">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM8 14H6v-2h2v2zm0-3H6V9h2v2zm0-3H6V6h2v2zm7 6h-5v-2h5v2zm3-3h-8V9h8v2zm0-3h-8V6h8v2z"/>
+                                    </svg>
+                                </div>
+                                <div class="event-details">
+                                    <h4>Guest Speaker: Int'l Linguistics</h4>
+                                    <p style="margin-bottom: 0.25rem;">A visit from a distinguished international scholar shaping the progressive discourse of modern linguistics.</p>
+                                    <span class="event-meta" style="color: var(--ou-crimson); font-weight: 600; display: block; margin-bottom: 0.5rem;">Today, 6:30 PM - Nielsen Hall</span>
+                                    <a href="#" style="font-size: 0.85rem; font-weight: 600; text-decoration: underline;">Learn More</a>
+                                </div>
                             </div>
                         </div>
 
@@ -332,7 +337,7 @@
                     <div class="student-life">
                         <h3 style="margin-bottom: 2rem;">News for this Month</h3>
 
-                        <div class="news-list" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div class="news-list" style="max-height: 400px; overflow-y: auto; padding-right: 1rem; display: flex; flex-direction: column; gap: 1.5rem;">
                             <div class="news-item" style="display: flex; gap: 1rem; align-items: flex-start;">
                                 <div style="width: 100px; height: 80px; background: var(--ou-light-gray); flex-shrink: 0; border-radius: 4px; overflow: hidden;">
                                     <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=200&auto=format&fit=crop" style="width: 100%; height: 100%; object-fit: cover;" alt="News thumbnail">
@@ -340,7 +345,8 @@
                                 <div style="flex: 1;">
                                     <h4 style="margin-bottom: 0.25rem; font-size: 1.1rem; line-height: 1.2;"><a href="#" style="color: var(--ou-black); transition: color 0.2s;">Department Announces New Linguistics Minor</a></h4>
                                     <p style="font-size: 0.9rem; color: var(--ou-dark-gray); margin-bottom: 0.25rem; line-height: 1.4;">Students can now enroll in the new Computational Linguistics program starting next semester.</p>
-                                    <span style="font-size: 0.8rem; color: var(--ou-crimson); font-weight: 600;">April 5, 2026</span>
+                                    <span style="font-size: 0.8rem; color: var(--ou-crimson); font-weight: 600; display: block; margin-bottom: 0.25rem;">April 5, 2026</span>
+                                    <a href="#" style="font-size: 0.85rem; font-weight: 600; text-decoration: underline;">Read Full Story</a>
                                 </div>
                             </div>
                             
@@ -351,7 +357,8 @@
                                 <div style="flex: 1;">
                                     <h4 style="margin-bottom: 0.25rem; font-size: 1.1rem; line-height: 1.2;"><a href="#" style="color: var(--ou-black); transition: color 0.2s;">Faculty Highlight: Dr. Elena Robertson</a></h4>
                                     <p style="font-size: 0.9rem; color: var(--ou-dark-gray); margin-bottom: 0.25rem; line-height: 1.4;">Dr. Robertson awarded the National Endowment for the Humanities grant for her research.</p>
-                                    <span style="font-size: 0.8rem; color: var(--ou-crimson); font-weight: 600;">April 12, 2026</span>
+                                    <span style="font-size: 0.8rem; color: var(--ou-crimson); font-weight: 600; display: block; margin-bottom: 0.25rem;">April 12, 2026</span>
+                                    <a href="#" style="font-size: 0.85rem; font-weight: 600; text-decoration: underline;">Read Full Story</a>
                                 </div>
                             </div>
 
@@ -362,7 +369,8 @@
                                 <div style="flex: 1;">
                                     <h4 style="margin-bottom: 0.25rem; font-size: 1.1rem; line-height: 1.2;"><a href="#" style="color: var(--ou-black); transition: color 0.2s;">Study Abroad Info Session Success</a></h4>
                                     <p style="font-size: 0.9rem; color: var(--ou-dark-gray); margin-bottom: 0.25rem; line-height: 1.4;">Over 200 students attended the summer study abroad overview in the student union.</p>
-                                    <span style="font-size: 0.8rem; color: var(--ou-crimson); font-weight: 600;">April 15, 2026</span>
+                                    <span style="font-size: 0.8rem; color: var(--ou-crimson); font-weight: 600; display: block; margin-bottom: 0.25rem;">April 15, 2026</span>
+                                    <a href="#" style="font-size: 0.85rem; font-weight: 600; text-decoration: underline;">Read Full Story</a>
                                 </div>
                             </div>
                         </div>
