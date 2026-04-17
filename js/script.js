@@ -187,3 +187,41 @@ function resetQuiz() {
     document.getElementById('quiz-step-2').style.display = 'none';
     document.getElementById('quiz-step-1').style.display = 'block';
 }
+
+// --- Hero Background Video Control (Local) ---
+document.addEventListener('DOMContentLoaded', () => {
+    const heroVideo = document.getElementById('hero-local-video');
+    
+    if (heroVideo) {
+        // Start playing at 3 seconds explicitly
+        const setStartTime = () => {
+            if (heroVideo.currentTime < 3) {
+                heroVideo.currentTime = 3;
+            }
+        };
+
+        // When metadata loads or just randomly on DOM, set 3 seconds
+        heroVideo.addEventListener('loadedmetadata', setStartTime);
+        heroVideo.addEventListener('play', setStartTime);
+
+        heroVideo.addEventListener('timeupdate', () => {
+            // Loop back to 3 seconds if we hit 18 seconds
+            if (heroVideo.currentTime >= 18) {
+                heroVideo.currentTime = 3;
+            }
+        });
+    }
+});
+
+// --- Department Navbar Mobile Toggle ---
+function toggleDeptMenu() {
+    const navLinks = document.getElementById('dept-nav-links');
+    const hamburgerIcon = document.getElementById('dept-hamburger');
+    
+    if (navLinks && hamburgerIcon) {
+        navLinks.classList.toggle('active');
+        hamburgerIcon.classList.toggle('open');
+    }
+}
+
+
