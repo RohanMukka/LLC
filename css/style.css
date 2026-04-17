@@ -1382,48 +1382,64 @@ ol {
     font-weight: 800;
     line-height: 1;
     font-family: serif;
+    animation: float-drift var(--float-duration, 15s) ease-in-out infinite alternate;
+}
+
+@keyframes float-drift {
+    0% { 
+        translate: 0px 0px; 
+    }
+    100% { 
+        translate: -40px -60px; 
+    }
 }
 
 .char-1 {
     top: -10%;
     left: -5%;
     font-size: 25rem;
-    transform: rotate(15deg);
+    rotate: 15deg;
+    --float-duration: 8s;
 }
 
 .char-2 {
     top: 40%;
     left: 20%;
     font-size: 15rem;
-    transform: rotate(-10deg);
+    rotate: -10deg;
+    --float-duration: 12s;
 }
 
 .char-3 {
     bottom: -10%;
     right: 5%;
     font-size: 30rem;
-    transform: rotate(5deg);
+    rotate: 5deg;
+    --float-duration: 9s;
 }
 
 .char-4 {
     top: 10%;
     right: 10%;
     font-size: 20rem;
-    transform: rotate(-20deg);
+    rotate: -20deg;
+    --float-duration: 14s;
 }
 
 .char-5 {
     bottom: 20%;
     left: 45%;
     font-size: 18rem;
-    transform: rotate(10deg);
+    rotate: 10deg;
+    --float-duration: 11s;
 }
 
 .char-6 {
     top: 30%;
     right: 40%;
     font-size: 22rem;
-    transform: rotate(25deg);
+    rotate: 25deg;
+    --float-duration: 10s;
     opacity: 0.02;
 }
 
