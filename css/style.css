@@ -22,9 +22,11 @@
     --bg-light: var(--ou-light-gray);
     --border-color: var(--ou-light-gray);
 
-    /* Typography */
-    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --font-display: 'Outfit', var(--font-sans);
+    /* Typography (Official OU Brand Fonts) */
+    --font-sans: 'Arboria', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-display: 'Mongoose', 'Outfit', var(--font-sans);
+    --font-wide: 'Obviously Wide', var(--font-display);
+    --font-serif: 'Freight', 'Freight Text Pro', 'Times New Roman', serif;
 
     /* Spacing & Sizing */
     --container-width: 1200px;
