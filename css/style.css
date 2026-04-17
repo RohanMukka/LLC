@@ -744,6 +744,35 @@ ol {
 }
 
 /* =========================================
+   Mobile Hero Layout (Stacked, Uncropped)
+   ========================================= */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        min-height: 0;
+        align-items: flex-start;
+        padding-top: 0;
+    }
+    
+    .hero-video-wrapper {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100vw;
+        height: 56.25vw; /* Native 16:9 ratio */
+        min-height: 0;
+        min-width: 0;
+        margin-bottom: 2rem; /* Spacing between video and text */
+    }
+
+    .hero-content {
+        padding: 0 1.5rem 3rem 1.5rem;
+    }
+}
+
+/* =========================================
    Intro Section
    ========================================= */
 .intro-section {
@@ -800,8 +829,7 @@ ol {
 .card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
-    border-top-color: var(--ou-leaf);
-    /* Subtle accent color on hover (<2% usage) */
+    border-top-color: var(--ou-crimson);
 }
 
 .card-content {
